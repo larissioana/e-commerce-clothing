@@ -138,6 +138,7 @@ padding: 0rem 2rem;
 
   .nav-toggle{
     display: block;
+    color:#17181a;
   }
 
   .nav-links{

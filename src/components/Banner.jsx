@@ -30,6 +30,7 @@ export default Banner;
     align-items: center;
     flex-wrap: wrap;
     background:#F8F8F8;
+    overflow-x: hidden;
 
    .left-container{
     h3{

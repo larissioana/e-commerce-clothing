@@ -53,6 +53,7 @@ export default Home;
 
 const Wrapper = styled(motion.div)`
 padding:0rem 3rem;
+overflow-x: hidden;
 .homepage-container{
     display:flex;
     justify-content: center;

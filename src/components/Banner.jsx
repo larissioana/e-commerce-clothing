@@ -51,6 +51,7 @@ export default Banner;
    }
     .right-container{
         padding-left: 2rem;
+        overflow-x: hidden;
         img{
             width:50rem;
             height:45rem;

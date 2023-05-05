@@ -14,17 +14,11 @@ const Navigation = () => {
     const [showLinks, setShowLinks] = useState(false);
     const {currentUser, setCurrentUser} = useContext(UserContext);
     const {isCartOpen} = useContext(CartContext);
-    const [googleUser, setGoogleUser] = useState(false);
 
     const signOutHandler = async () => {
     await signOutUser();
     setCurrentUser(null)
     };
-
-    const googleUserHandler = () => {
-      setGoogleUser(!googleUser);
-    }
-
 
     return (
          <>

@@ -20,12 +20,13 @@ export default Directory;
 
 const Wrapper = styled.div`
 width:100vw;
-.text-animation{
+
+  h4{
     font-size:clamp(1rem, 3vw, 2.7rem);
     margin-top:3rem;
     animation: textAnimation 20s linear infinite;
+  }
 
-}
 @keyframes textAnimation {
   0% {
     transform: translateX(100%);

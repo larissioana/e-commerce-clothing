@@ -4,6 +4,7 @@ import { CartContext } from "../context/Cart-Context";
 import {AiOutlineCaretDown, AiOutlineCaretUp} from 'react-icons/ai';
 import {FaTrash} from 'react-icons/fa';
 import PaymentForm from "../components/Payment-Form";
+import ScrollTop from '../components/ScrollTop';
 
 const Checkout = () => {
     const {
@@ -46,6 +47,7 @@ const Checkout = () => {
             :<p className="empty-bag">Your bag is empty</p>
         }
         <PaymentForm/>
+        <ScrollTop/>
         </Wrapper>
     )
     };

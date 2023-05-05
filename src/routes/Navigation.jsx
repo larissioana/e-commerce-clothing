@@ -9,15 +9,22 @@ import {signOutUser} from '../utils/firebase/firebase';
 import CartIcon from "../components/Cart-Icon";
 import CartDropdown from "../components/Cart-Dropdown";
 
+
 const Navigation = () => {
     const [showLinks, setShowLinks] = useState(false);
     const {currentUser, setCurrentUser} = useContext(UserContext);
     const {isCartOpen} = useContext(CartContext);
-    
+    const [googleUser, setGoogleUser] = useState(false);
+
     const signOutHandler = async () => {
     await signOutUser();
     setCurrentUser(null)
     };
+
+    const googleUserHandler = () => {
+      setGoogleUser(!googleUser);
+    }
+
 
     return (
          <>

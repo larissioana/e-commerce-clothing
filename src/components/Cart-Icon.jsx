@@ -9,7 +9,7 @@ const CartIcon = () => {
   const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen);
     
     return (
-        <Wrapper className='cart-icon-container' onClick={toggleIsCartOpen}>
+        <Wrapper onClick={toggleIsCartOpen}>
         <AiFillShopping className='shopping-icon'/>
         <span className='item-count'>{cartCount}</span>
         </Wrapper>

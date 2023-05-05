@@ -27,14 +27,6 @@ const CategoriesPreview = () => {
     return (
         <div className="categories-preview-container">
         <Wrapper>
-        <div className="image-gallery">
-        <img src={currentImage} alt='clothes gallery'/>
-        </div>
-        <div className="title">
-            <h1 className="color">New <br/> Connection</h1>
-            <h1>With the</h1>
-            <h1>New generation</h1>
-        </div>
         <Categories>
             <div className="category-preview">
         {
@@ -46,7 +38,15 @@ const CategoriesPreview = () => {
     }
             </div>
         </Categories>
-        </Wrapper>
+        <div className="title">
+            <h1 className="color">New <br/> Connection</h1>
+            <h1>With the</h1>
+            <h1>New generation</h1>
+        </div>
+        <div className="image-gallery">
+       <img src={currentImage} alt='clothes gallery'/> 
+        </div>
+       </Wrapper>
         </div>
     )
 };
@@ -60,17 +60,14 @@ const Wrapper = styled.div`
 
     .image-gallery{
      width:100vw;
-     margin-top:-24rem;
-   
 
-    img{
+     img{
         width:100%;
         object-fit: cover;
-        transform: rotate(90deg);
     }
     @media (max-width:1100px){
         margin-top:5rem;
-        margin-bottom:14rem;
+      
         
     img{
         transform:none;
@@ -82,10 +79,10 @@ const Wrapper = styled.div`
 .title{
     display:grid;
     place-content: center;
-    padding-bottom:8rem;
-    margin-top:-10rem;
+    padding-bottom:3rem;
+    margin-top:-13rem;
   
-     h1{
+  h1{
         color:#17181a;
         text-transform: uppercase;
         font-size:clamp(2rem, 4vw, 3.8rem);
@@ -97,9 +94,9 @@ const Wrapper = styled.div`
 `;
    
 const Categories = styled.div`
-   margin-top:15rem;
+padding-top: 25rem;
 
-  `
+  `;
    
    
 

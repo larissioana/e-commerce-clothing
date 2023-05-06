@@ -29,7 +29,10 @@ const Wrapper=styled.div`
  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
  place-items: center;
  gap:2rem;
-
+ margin-bottom: 4rem;
+ button{
+  margin-top:-.6rem;
+ }
 img{
     width:25rem;
     height:35rem;
@@ -54,7 +57,7 @@ img{
     }
   }
 .products-details{
-  margin-top:2rem;
+  margin-top:1rem;
   .price{
     margin-left:1rem;
   }

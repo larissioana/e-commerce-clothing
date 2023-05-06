@@ -27,7 +27,7 @@ export default CategoryItem;
 const Wrapper=styled.div`
 overflow-x: hidden;
 .category-container {
-     min-height:65vh;
+     height:40rem;
      display:grid;
      place-items: center;
      overflow:hidden;

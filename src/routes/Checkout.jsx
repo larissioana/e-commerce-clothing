@@ -36,7 +36,7 @@ const Checkout = () => {
                 </div>
                </div>
                <div className="price">
-               <button onClick={() => clearItemFromCart(cartItem)}>
+               <button className="clear-btn" onClick={() => clearItemFromCart(cartItem)}>
                 <FaTrash/>
                </button>
                <p>${price}</p>
@@ -59,18 +59,19 @@ const Checkout = () => {
     margin-bottom:3rem;
     width:90vw;
     .container{
-       margin:0rem 3rem;
+       margin:0rem 2rem;
        display:flex;
        justify-content: center;
        align-items: center;
        margin-bottom:6rem;
        border-bottom: 1px solid #c3c5c9;
-       width:50rem;
+       width:60rem;
    
        h4{
-           font-size:clamp(.7rem, 2vw, 1rem);
-           margin-top:-9rem;
-           margin-left:3rem;
+           font-size:clamp(.7rem, 2vw, 1.1rem);
+           margin-top:-14rem;
+           margin-left:2rem;
+           width:10rem;
            
        }
        
@@ -90,7 +91,11 @@ const Checkout = () => {
        padding:2rem;
        cursor:pointer;
        margin-left:3rem;
-   
+       color:#17181a;
+       
+       button{
+        color:#17181a;
+       }
        .left,.right{
            flex:1;
        }
@@ -106,10 +111,11 @@ const Checkout = () => {
    
    .price{
        margin-left:2rem;
-       button{
+       .clear-btn{
            cursor:pointer;
            color: #c3c5c9;
            font-size:1.1rem;
+           
        }
        p{
            margin-top:2rem;

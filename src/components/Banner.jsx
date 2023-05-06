@@ -57,6 +57,7 @@ export default Banner;
             height:45rem;
             object-fit: cover;
             object-position: top;
+            overflow-x: hidden;
         }
     }
     @media (max-width:490px){

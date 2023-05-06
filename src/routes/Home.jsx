@@ -6,12 +6,7 @@ import { useNavigate } from "react-router-dom";
 import {motion} from 'framer-motion';
 import { pageAnimation } from "../animations";
 import ScrollTop from "../components/ScrollTop";
-
-const fashionDresses = [
-'https://i.ibb.co/DkykDsS/pexels-godisable-jacob-833186.png',
-'https://i.ibb.co/PQNTX8C/pexels-godisable-jacob-833187.png',
-'https://i.ibb.co/bWtQXD9/pexels-godisable-jacob-833185.png'
-];
+import { fashionDresses } from "../data/dresses-data";
 
 
 const Home = ({categories}) => {
@@ -91,7 +86,10 @@ padding:0rem 3rem;
 
     @media (max-width:490px){
         img{
-          width:25rem;
+          max-width:100%;
+          max-height:30rem;
+          margin-bottom:1rem;
+        
         }
     }
 `

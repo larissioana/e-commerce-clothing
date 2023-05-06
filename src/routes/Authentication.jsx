@@ -53,6 +53,7 @@ const Wrapper = styled(motion.div)`
             height:4rem;
             padding:1rem 1.2rem;
             font-weight: bolder;
+            color:#17181a;
         }
     }
 `

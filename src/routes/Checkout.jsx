@@ -16,10 +16,9 @@ const Checkout = () => {
 } = useContext(CartContext);
     
     return (
-        <>
+     
         <Wrapper>
-            <h3>Order Summary.</h3>
-           {cartItems.map((cartItem) => {
+            {cartItems.map((cartItem) => {
                 const {name, quantity, id, imageUrl, price} = cartItem;
                 return <div key={id} className='container'>
                 <img src={imageUrl} alt={name}/>
@@ -51,7 +50,6 @@ const Checkout = () => {
         <PaymentForm/>
         <ScrollTop/>
         </Wrapper>
-        </>
     )
     };
 

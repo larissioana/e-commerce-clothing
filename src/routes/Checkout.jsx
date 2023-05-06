@@ -16,7 +16,9 @@ const Checkout = () => {
 } = useContext(CartContext);
     
     return (
+        <>
         <Wrapper>
+            <h3>Order Summary.</h3>
            {cartItems.map((cartItem) => {
                 const {name, quantity, id, imageUrl, price} = cartItem;
                 return <div key={id} className='container'>
@@ -49,15 +51,24 @@ const Checkout = () => {
         <PaymentForm/>
         <ScrollTop/>
         </Wrapper>
+        </>
     )
     };
 
     export default Checkout;
 
     const Wrapper=styled.div`
-    margin-top:10rem;
+    margin-top:12rem;
     margin-bottom:3rem;
     width:90vw;
+    display: grid;
+    
+    h3{
+        margin-bottom:8rem;
+        text-align: center;
+        font-weight: bolder;
+        font-size:clamp(1rem, 2vw, 1.2rem);
+    }
     .container{
        margin:0rem 2rem;
        display:flex;

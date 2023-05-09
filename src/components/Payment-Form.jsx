@@ -18,7 +18,6 @@ const PaymentForm = () => {
     const {cartTotal} = useContext(CartContext);
     const amount = cartTotal;
    
-
     const paymentHandler = async (event) => {
         event.preventDefault();
        
@@ -52,11 +51,12 @@ const PaymentForm = () => {
         alert(paymentResult.error)
     } else {
         if(paymentResult.paymentIntent.status === 'succeeded') {
-            alert('Payment Successful')
+           alert('Your order has been successfully placed')
            
         }
     }
 }
+
 
     return (
         <Wrapper>
@@ -72,6 +72,8 @@ const PaymentForm = () => {
          <Button>Pay now</Button>
          </form>
         </Wrapper>
+    
+
     )
 };
 
@@ -123,4 +125,6 @@ const Wrapper = styled.div`
         }
      }
 `;
+
+
 

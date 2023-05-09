@@ -28,11 +28,11 @@ const Checkout = () => {
                 <p>{quantity}</p>
                 </div>
                 <div className="right">
-                <button onClick={() => removeItemFromCart(cartItem)}>
-                    <AiOutlineCaretDown/>
-                </button>
                 <button onClick={() => addItemToCart(cartItem)}>
                     <AiOutlineCaretUp/>
+                </button>
+                <button onClick={() => removeItemFromCart(cartItem)}>
+                    <AiOutlineCaretDown/>
                 </button>
                 </div>
                </div>
@@ -104,7 +104,10 @@ const Checkout = () => {
        
        button{
         color:#17181a;
+        font-size:1rem;
        }
+      
+
        .left,.right{
            flex:1;
        }

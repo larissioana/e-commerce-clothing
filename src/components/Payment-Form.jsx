@@ -9,7 +9,7 @@ import {
 } from "@stripe/react-stripe-js";
 import { UserContext } from "../context/User-Context";
 import { CartContext } from "../context/Cart-Context";
-import { useContext } from "react";
+import { useContext} from "react";
 
 const PaymentForm = () => {
     const stripe = useStripe();
@@ -21,11 +21,12 @@ const PaymentForm = () => {
 
     const paymentHandler = async (event) => {
         event.preventDefault();
-
+       
     if(!stripe || !elements){
         return;
+       
     }
-    
+        
     const response = await fetch('/.netlify/functions/create-payment-intent', {
         method: 'post',
         headers: {
@@ -52,17 +53,18 @@ const PaymentForm = () => {
     } else {
         if(paymentResult.paymentIntent.status === 'succeeded') {
             alert('Payment Successful')
+           
         }
     }
 }
 
     return (
         <Wrapper>
-            <h2>Credit card payment</h2>
-            <form onSubmit={paymentHandler}>
+        <h2>Credit card payment</h2>
+        <form onSubmit={paymentHandler}>
+        <span className="test-card">Enter the test card number: 4242 4242 4242 4242</span>
          <span>Card number</span>
-         <span className="test-card">Enter the test card number: 4242 4242 4242 4242</span>
-         <CardNumberElement className="card" placeholder='test'/>
+         <CardNumberElement className="card" placeholder="test"/>
          <span>Expiration</span>
          <CardExpiryElement className="card"/>
          <span>CVC</span>
@@ -94,16 +96,15 @@ const Wrapper = styled.div`
         margin-bottom:1rem;
         text-indent:.6rem;
         font-weight: bolder;
-
-    }
+}
     .test-card{
         color:#ca4705;
+        text-align: center;
+        line-height: 1.3rem;
+        padding-bottom: 1rem;
     }
-  
-    }
-    
-
-    .card{
+   }
+     .card{
         margin-bottom:1rem;
         width:100%;
         border:1px solid #171a1a;

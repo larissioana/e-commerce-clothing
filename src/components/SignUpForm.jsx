@@ -5,6 +5,7 @@ import FormInput from "./FormInput";
 import Button from "./Button";
 import {Form} from '../styles';
 import { UserContext } from "../context/User-Context";
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
  displayName: "",
@@ -16,7 +17,9 @@ const initialState = {
 const SignUpForm = () => {
     const [formFields, setFormFields] = useState(initialState)
     const {displayName, email, password, confirmPassword} = formFields;
+    const [userMsg, setUserMsg] = useState("");
     const {setCurrentUser} =useContext(UserContext);
+    const navigate = useNavigate();
 
     const resetFormFields = () => {
         setFormFields(initialState);
@@ -24,9 +27,9 @@ const SignUpForm = () => {
 
     const handleSubmit = async (event) => {
     event.preventDefault();
-
+    navigate('/shop/women')
     if(password !== confirmPassword){
-        alert('passwords do not match');
+        setUserMsg('passwords do not match');
         return;
     }
 
@@ -44,9 +47,11 @@ const SignUpForm = () => {
       }
       console.log('user created encountered an error', error)
     }
+
     };
 
     const handleChange = (event) => {
+    setUserMsg("");
     const {name, value} = event.target;
     setFormFields({...formFields, [name]: value})
     };
@@ -60,6 +65,7 @@ const SignUpForm = () => {
             <FormInput label='Email' required type='email' onChange={handleChange} name='email' value={email}/>
             <FormInput label='Password' required type='password' onChange={handleChange} name='password' value={password}/>
             <FormInput label='Confirm Password' required type='password' onChange={handleChange} name='confirmPassword' value={confirmPassword}/>
+            <p className="userMsg">{userMsg}</p>
             <Button type='submit'>Create account</Button>
          </Form>
          </div>
@@ -72,5 +78,9 @@ export default SignUpForm;
 const Wrapper = styled.div`
 display:grid;
 place-content: center;
+
+.userMsg{
+  text-transform: capitalize;
+}
 `;
 

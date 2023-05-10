@@ -27,7 +27,7 @@ const SignUpForm = () => {
 
     const handleSubmit = async (event) => {
     event.preventDefault();
-    navigate('/shop/women')
+    navigate('/shop')
     if(password !== confirmPassword){
         setUserMsg('passwords do not match');
         return;

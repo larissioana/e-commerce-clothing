@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Button from "./Button";
 import CartItem from "./Cart-Item";
-import { useContext } from "react";
+import { useContext} from "react";
 import { CartContext } from "../context/Cart-Context";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const CartDropdown = () => {
   };
 
     return (
-        <Wrapper>
+        <Wrapper >
           <div className="cart-items">
           {cartItems.map((item) => {
             return <CartItem cartItem={item} key={item.id}/>

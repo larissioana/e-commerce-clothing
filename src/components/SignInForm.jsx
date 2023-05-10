@@ -30,7 +30,7 @@ const SignInForm = () => {
         const {user} = await signInWithGooglePopup();
         await createUserDocumentFromAuth(user)
         setCurrentUser(user);
-        navigate('/shop/women')
+        navigate('/shop')
     };
 
     const handleChange = (event) => {
@@ -41,7 +41,7 @@ const SignInForm = () => {
     
         const handleSubmit = async (event) => {
             event.preventDefault();
-            navigate('/shop/women')
+            navigate('/shop')
             try{
               const {user} =  await signInUserWithEmailAndPassword(email, password);
                setCurrentUser(user);

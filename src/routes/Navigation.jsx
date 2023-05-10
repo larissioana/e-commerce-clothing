@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {IoClose} from 'react-icons/io5';
-import { useState, useContext } from "react";
+import { useState, useContext, useRef, useEffect} from "react";
 import {NavLink} from 'react-router-dom';
 import { UserContext } from "../context/User-Context";
 import { CartContext } from "../context/Cart-Context";
@@ -14,7 +14,8 @@ const Navigation = () => {
     const [showLinks, setShowLinks] = useState(false);
     const {currentUser, setCurrentUser} = useContext(UserContext);
     const {isCartOpen} = useContext(CartContext);
-
+    
+ 
     const signOutHandler = async () => {
     await signOutUser();
     setCurrentUser(null)

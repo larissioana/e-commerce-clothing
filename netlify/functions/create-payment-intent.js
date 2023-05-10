@@ -9,7 +9,7 @@ exports.handler = async (event) => {
         amount,
         currency: 'usd',
         payment_method_types: ["card"],
-        
+        address
      });
 
      return {

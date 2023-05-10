@@ -10,17 +10,19 @@ import {
 } from "@stripe/react-stripe-js";
 import { UserContext } from "../context/User-Context";
 import { CartContext } from "../context/Cart-Context";
-import { useContext} from "react";
+import { useContext, useState} from "react";
 
 const PaymentForm = () => {
     const stripe = useStripe();
     const elements = useElements();
     const {currentUser} = useContext(UserContext);
+    const [address, setAddress] = useState('');
     const {cartTotal} = useContext(CartContext);
     const amount = cartTotal;
 
     const paymentHandler = async (event) => {
         event.preventDefault();
+    
        
     if(!stripe || !elements){
         return;
@@ -32,7 +34,7 @@ const PaymentForm = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ amount: amount * 100 }),
+        body: JSON.stringify({ amount: amount * 100}),
       }).then((res) => {
         return res.json();
       });
@@ -44,8 +46,8 @@ const PaymentForm = () => {
             card: elements.getElement(CardCvcElement, CardExpiryElement, CardNumberElement, AddressElement),
             billing_details: {
                 name: currentUser ? currentUser.displayName : 'Guest',
-
-            }
+        
+         }
         }
     });
 
@@ -58,13 +60,18 @@ const PaymentForm = () => {
         }
     }
 }
-
+const adressElementHandler = (e) => {
+    if(e.complete){
+        const address = e.value.address;
+        setAddress(address);
+    }
+}
 
     return (
         <Wrapper>
         <h2>Credit card payment</h2>
         <form onSubmit={paymentHandler}>
-        <AddressElement className="card card-adress"  options={{
+        <AddressElement onChange={adressElementHandler} value={address} className="card card-adress"  options={{
             mode: 'shipping',
            
          }}/>

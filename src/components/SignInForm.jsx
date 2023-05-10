@@ -41,12 +41,12 @@ const SignInForm = () => {
     
         const handleSubmit = async (event) => {
             event.preventDefault();
-            navigate('/shop')
+       
             try{
               const {user} =  await signInUserWithEmailAndPassword(email, password);
                setCurrentUser(user);
                resetFormFields();
-         
+               navigate('/shop');
             }catch(error){
                 switch(error.code){
                    case 'auth/wrong-password':
@@ -59,6 +59,7 @@ const SignInForm = () => {
                      console.log(error);
                 }
                }
+           
             };
 
     return (

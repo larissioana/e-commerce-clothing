@@ -27,7 +27,7 @@ const SignUpForm = () => {
 
     const handleSubmit = async (event) => {
     event.preventDefault();
-    navigate('/shop')
+ 
     if(password !== confirmPassword){
         setUserMsg('passwords do not match');
         return;
@@ -40,6 +40,7 @@ const SignUpForm = () => {
          setCurrentUser(user);
          await createUserDocumentFromAuth(user, {displayName});
          resetFormFields();
+         navigate('/shop')
  
     } catch(error){
       if(error.code === 'auth/email-already-in-use'){

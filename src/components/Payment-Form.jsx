@@ -68,7 +68,7 @@ const adressElementHandler = (e) => {
 
     return (
         <Wrapper>
-        <h2>Credit card payment</h2>
+        <h2>Credit card payment: test payment</h2>
         <form onSubmit={paymentHandler}>
         <AddressElement onChange={adressElementHandler} value={address} className="card card-adress"  options={{
             mode: 'shipping',

@@ -39,6 +39,7 @@ width:100vw;
 display:grid;
 grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 margin-top:6rem;
+
 }
 
 `

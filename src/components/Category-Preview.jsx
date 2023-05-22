@@ -50,6 +50,7 @@ place-items: center;
     column-gap:1rem;
     margin-bottom:22rem;
     margin-top: 2rem;
+  
     img{
         width:20rem;
         height:25rem;

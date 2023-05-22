@@ -32,7 +32,7 @@ overflow-x: hidden;
      place-items: center;
      overflow:hidden;
      margin-bottom:1.5rem;
-
+    
      &:hover {
       cursor: pointer;
   

@@ -10,7 +10,7 @@ const ProductCard = ({product}) => {
     
     const addProductToCart = () => addItemToCart(product);
     return (
-        <Wrapper className="product-card-container">
+        <Wrapper>
         <img src={imageUrl} alt={name}/>
         <div className="products-details">
         <span className="name">{name}</span>
@@ -30,6 +30,7 @@ const Wrapper=styled.div`
  place-items: center;
  gap:2rem;
  margin-bottom: 4rem;
+ 
  button{
   margin-top:-.6rem;
  }

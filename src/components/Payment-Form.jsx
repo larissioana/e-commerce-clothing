@@ -16,7 +16,6 @@ const PaymentForm = () => {
     const stripe = useStripe();
     const elements = useElements();
     const {currentUser} = useContext(UserContext);
-    const [address, setAddress] = useState('');
     const {cartTotal} = useContext(CartContext);
     const amount = cartTotal;
 
@@ -59,18 +58,12 @@ const PaymentForm = () => {
         }
     }
 }
-const adressElementHandler = (e) => {
-    if(e.complete){
-        const address = e.value.address;
-        setAddress(address);
-    }
-}
 
     return (
         <Wrapper>
         <h2>Credit card payment: test payment</h2>
         <form onSubmit={paymentHandler}>
-        <AddressElement onChange={adressElementHandler} value={address} className="card card-adress"  options={{
+        <AddressElement className="card card-adress"  options={{
             mode: 'shipping',
            
          }}/>

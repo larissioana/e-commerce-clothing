@@ -21,8 +21,11 @@ const Checkout = () => {
             {cartItems.map((cartItem) => {
                 const {name, quantity, id, imageUrl, price} = cartItem;
                 return <div key={id} className='container'>
-                <img src={imageUrl} alt={name}/>
+                <div className='product'>
                 <h4>{name}</h4>
+                <img src={imageUrl} alt={name}/>
+               
+                </div>
                <div className="quantity">
                 <div className="left">
                 <p>{quantity}</p>
@@ -74,13 +77,20 @@ const Checkout = () => {
        align-items: center;
        margin-bottom:6rem;
        border-bottom: 1px solid #c3c5c9;
-       width:60rem;
+       width:65rem;
+
+       .product{
+        width:100%;
+       }
+
+       .product, .price{
+        flex:1;
+       }
    
        h4{
-           font-size:clamp(.7rem, 2vw, 1.1rem);
-           margin-top:-14rem;
-           margin-left:2rem;
-           width:10rem;
+          font-size:clamp(.7rem, 2vw, 1.1rem);
+          margin-bottom:1rem;
+          max-width:600px;
            
        }
        
@@ -149,26 +159,28 @@ const Checkout = () => {
            justify-content: center;
            align-items: center;
            margin-left:1rem;
+           flex-wrap: wrap;
+         
+         
 
            .left, .right{
             display:grid;
            }
-           h4{
-            width:5rem;
-           }
+       
            img{
-            width:4.5rem;
+            width:5rem;
            }
          
            .quantity{
                padding:1rem;
                margin-top:1rem;
                width:3rem;
-               margin-left:0rem;
+            
            
            }
            .price{
                margin-top:3rem;
+               padding-bottom:2rem;
                flex-direction:column;
                display:flex;
                margin-right:.4rem;
@@ -178,6 +190,24 @@ const Checkout = () => {
                }
            }
        }
+   }
+
+   @media (max-width: 400px){
+    .container{
+        width:100%;
+        flex-wrap: wrap;
+       
+      
+    }
+
+    .left, .right{
+        flex-direction: row;
+        margin-left:0;
+    }
+
+    .price{
+        padding-right:1rem;
+    }
    }
    `;
    

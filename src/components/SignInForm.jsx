@@ -50,10 +50,10 @@ const SignInForm = () => {
             }catch(error){
                 switch(error.code){
                    case 'auth/wrong-password':
-                       setUserMsg('incorrect password for email');
+                       setUserMsg('Incorrect password for this email');
                        break;
                    case 'auth/user-not-found':
-                       setUserMsg('no user associated with this email');
+                       setUserMsg('No user associated with this email');
                        break;
                        default:
                      console.log(error);

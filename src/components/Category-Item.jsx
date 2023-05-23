@@ -46,8 +46,8 @@ overflow-x: hidden;
       }
     }
     .background-image {
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 80%;
       background-size: cover;
       background-position:center;
      

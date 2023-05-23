@@ -43,10 +43,16 @@ const SignUpForm = () => {
          navigate('/shop')
  
     } catch(error){
-      if(error.code === 'auth/email-already-in-use'){
-        alert(' Cannot create user, email already in use')
+      switch(error.code){
+        case 'auth/email-already-in-use':
+          setUserMsg('Cannot create user, email already in use');
+          break;
+        case 'auth/weak-password':
+          setUserMsg('Password should be at least 6 characters');
+          break;
+          default:
+            console.log('User created encountered an error', error)
       }
-      console.log('user created encountered an error', error)
     }
 
     };

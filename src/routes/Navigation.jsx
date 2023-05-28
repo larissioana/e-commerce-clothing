@@ -76,6 +76,7 @@ left:0;
 z-index:10;
 color:#17181a;
 padding: 0rem 2rem;
+background:#ffff;
 
 .nav-flex{
     width:100vw;

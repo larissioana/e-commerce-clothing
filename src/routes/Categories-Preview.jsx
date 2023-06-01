@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { CategoriesContext } from "../context/Categories-Context";
 import { useContext, useEffect, useState } from "react";
 import CategoryPreview from "../components/Category-Preview";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const photos = [
     'https://i.ibb.co/61kfRRZ/pexels-godisable-jacob-987577.jpg',
@@ -44,7 +45,7 @@ const CategoriesPreview = () => {
             <h1>New generation</h1>
         </div>
         <div className="image-gallery">
-       <img src={currentImage} alt='clothes gallery'/> 
+       <LazyLoadImage src={currentImage} alt='clothes gallery'/> 
         </div>
        </Wrapper>
         </div>

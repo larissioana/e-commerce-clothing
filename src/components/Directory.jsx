@@ -25,6 +25,9 @@ width:100vw;
     font-size:clamp(1rem, 3vw, 2.7rem);
     margin-top:3rem;
     animation: textAnimation 20s linear infinite;
+    display:flex;
+    flex-wrap: nowrap;
+    width:100%;
   }
 
 @keyframes textAnimation {

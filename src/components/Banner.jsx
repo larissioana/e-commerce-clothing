@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 const Banner = () => {
     const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ const Banner = () => {
         <p onClick={onNavigateHandler}>Looks for occasions</p>
      </div>
      <div className="right-container">
-        <img src='https://i.ibb.co/0YYW5y1/pexels-godisable-jacob-912787-1.png' alt='banner clothing'/>
+        <LazyLoadImage src='https://i.ibb.co/0YYW5y1/pexels-godisable-jacob-912787-1.png' alt='banner clothing' width='1300' height='800'/>
      </div>
     </Wrapper>
     )

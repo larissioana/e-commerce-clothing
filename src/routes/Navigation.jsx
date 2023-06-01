@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {IoClose} from 'react-icons/io5';
-import { useState, useContext, useRef, useEffect} from "react";
+import { useState, useContext} from "react";
 import {NavLink} from 'react-router-dom';
 import { UserContext } from "../context/User-Context";
 import { CartContext } from "../context/Cart-Context";

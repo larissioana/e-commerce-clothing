@@ -32,6 +32,7 @@ overflow-x: hidden;
      place-items: center;
      overflow:hidden;
      margin-bottom:1.5rem;
+
     
      &:hover {
       cursor: pointer;
@@ -43,6 +44,7 @@ overflow-x: hidden;
   
       & .category-body-container {
         background-color: rgba(0,0,0,0.7);
+   
       }
     }
     .background-image {
@@ -50,6 +52,7 @@ overflow-x: hidden;
       height: 80%;
       background-size: cover;
       background-position:center;
+
      
       &:hover{
         filter:grayscale(20%);

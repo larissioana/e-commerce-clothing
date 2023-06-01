@@ -10,7 +10,7 @@ import {
 } from "@stripe/react-stripe-js";
 import { UserContext } from "../context/User-Context";
 import { CartContext } from "../context/Cart-Context";
-import { useContext, useState} from "react";
+import { useContext} from "react";
 
 const PaymentForm = () => {
     const stripe = useStripe();

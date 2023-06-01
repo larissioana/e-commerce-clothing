@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "./Button";
 import { useContext } from "react";
 import { CartContext } from "../context/Cart-Context";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ProductCard = ({product}) => {
     const {name, price, imageUrl} = product;
@@ -11,7 +11,7 @@ const ProductCard = ({product}) => {
     const addProductToCart = () => addItemToCart(product);
     return (
         <Wrapper>
-        <img src={imageUrl} alt={name}/>
+        <LazyLoadImage src={imageUrl} alt={name} width='300' height='300'/>
         <div className="products-details">
         <span className="name">{name}</span>
         <span className="price">${price}</span>

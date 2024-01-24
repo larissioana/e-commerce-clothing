@@ -4,22 +4,24 @@ import { useContext, useState, useEffect } from "react";
 import { CategoriesContext } from "../context/Categories-Context";
 import ProductCard from "../components/ProductCard";
 
-const Category = () => {
+const Category = () =>
+{
     const {category} = useParams();
     const {categoriesMap} = useContext(CategoriesContext);
     const [products, setProducts] = useState(categoriesMap[category]);
 
-    useEffect(() => {
+    useEffect(() =>
+    {
         setProducts(categoriesMap[category]);
     }, [category, categoriesMap]);
 
     return (
         <Wrapper>
-          {
-        products && products.map((product) => {
-            return <ProductCard key={product.id} product={product}/>
-        })
-     }
+            {
+                products && products.map((product) => {
+                return <ProductCard key={product.id} product={product}/>
+                })
+            }
         </Wrapper>
     )
 };
@@ -27,12 +29,11 @@ const Category = () => {
 export default Category;
 
 const Wrapper=styled.div`
-margin-top:10rem;
+margin-top: 10rem;
 margin-bottom: 4rem;
-display:flex;
+display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-gap:1rem;
-
-`
+gap: 1rem;
+`;

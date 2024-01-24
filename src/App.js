@@ -13,19 +13,17 @@ const App = () => {
 
   return (
     <div className="App">
-      <GlobalStyle/>
-      <AnimatePresence mode="wait">
-      <Navigation/>
-      <Routes location={location} key={location.pathname}>
-      <Route index element={<Home categories={categories}/>}/>
-      <Route path='shop/*' element={<Shop/>}/>
-      <Route path='auth' element={<Authentication/>}/>
-      <Route path='checkout' element={<Checkout/>}/>
-      </Routes>
-      </AnimatePresence>
+        <GlobalStyle/>
+        <AnimatePresence mode="wait">
+            <Navigation/>
+            <Routes location={location} key={location.pathname}>
+              <Route index element={<Home categories={categories}/>}/>
+              <Route path='shop/*' element={<Shop/>}/>
+              <Route path='auth' element={<Authentication/>}/>
+              <Route path='checkout' element={<Checkout/>}/>
+            </Routes>
+        </AnimatePresence>
      </div>
-  
- 
   );
 }
 

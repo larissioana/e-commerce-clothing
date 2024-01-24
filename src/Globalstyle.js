@@ -1,32 +1,35 @@
 import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  *{
-    margin:0;
-    padding:0;
+*
+{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-  }
+}
 
-
-  body{
+body
+{
     overflow-x: hidden;
     background:#ffff;
     font-family: 'Raleway', sans-serif;
-   }
+}
 
-
-   li{
+li
+{
     list-style: none;
-   }
+}
 
-   a{
+a
+{
     text-decoration: none;
     color:#17181a;
-    }
+}
 
-   button{
-    border:none;
-    background:none;
-    cursor:pointer;
-   }
+button
+{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
 `

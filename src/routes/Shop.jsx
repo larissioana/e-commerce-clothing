@@ -6,15 +6,16 @@ import { pageAnimation } from "../animations";
 import {motion} from 'framer-motion';
 import ScrollTop from "../components/ScrollTop";
 
-const Shop = () => {
+const Shop = () =>
+{
 
     return (
         <Wrapper variants={pageAnimation} exit="exit" animate="show" initial="hidden">
-         <Routes>
-            <Route index element={<CategoriesPreview/>}/>
-            <Route path=":category" element={<Category/>}/>
-         </Routes>
-        <ScrollTop/>
+            <Routes>
+                <Route index element={<CategoriesPreview/>}/>
+                <Route path=":category" element={<Category/>}/>
+            </Routes>
+            <ScrollTop/>
         </Wrapper>
     )
 };

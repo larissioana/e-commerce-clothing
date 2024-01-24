@@ -1,5 +1,4 @@
-export 
-const categories = [
+export const categories = [
   {
     id:1,
     title: 'Dresses',

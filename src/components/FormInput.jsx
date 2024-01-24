@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-const FormInput = ({label, ...otherProps}) => {
+const FormInput = ({label, ...otherProps}) =>
+{
     return (
         <Wrapper>
-        <div className="form-input">
-        <label>{label}</label>
-        <input {...otherProps}/>
-        </div>
+            <div className="form-input">
+                <label>{label}</label>
+                <input {...otherProps}/>
+            </div>
         </Wrapper>
     )
 };
@@ -14,7 +15,8 @@ const FormInput = ({label, ...otherProps}) => {
 export default FormInput;
 
 const Wrapper = styled.div`
-.form-input{
-    display:grid;
+.form-input
+{
+    display: grid;
 }
 `;
